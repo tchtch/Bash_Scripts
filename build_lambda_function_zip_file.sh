@@ -195,7 +195,7 @@ function function_package_build() {
     get_package_manager ${SOFTWARE_LIST}
     create_and_activate_virtualenv
     check_lambda_function_handler
-    sudo rm -Rf ${TEMP_DIR}/*dist-info
+    sudo rm -Rf ${TEMP_DIR}/*{dist-info,docs,tests,__pycache__}
     build_deployment_package
     clean_up_build
 }
